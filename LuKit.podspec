@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LuKit"
-  s.version      = "0.1.0"
+  s.version      = "0.0.1"
   s.summary      = "A custom framework."
   # s.description  = <<-DESC
   #                 A custom framework.
@@ -16,19 +16,19 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "LICENSE" }
 
-  s.author             = { "RamboLu" => "coderambolu@gmail.com" }
+  s.author       = { "RamboLu" => "coderambolu@gmail.com" }
 
   # s.platform     = :ios
   s.platform     = :ios, "9.0"
 
   s.source       = { :git => "https://github.com/RamboLouis/LuKit.git", :tag => s.version }
 
-  s.source_files  = "Source/*.swift"
+  s.source_files  = "Classes/*.swift"
 
   s.requires_arc = true
 
   # s.dependency "JSONKit", "~> 1.4"
 
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
+  # s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
 
 end
