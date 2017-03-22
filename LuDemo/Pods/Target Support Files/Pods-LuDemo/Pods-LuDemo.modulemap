@@ -1,0 +1,6 @@
+framework module Pods_LuDemo {
+  umbrella header "Pods-LuDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

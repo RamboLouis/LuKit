@@ -8,7 +8,7 @@
 
 import UIKit
 
-fileprivate let buttonAlertIdentifier = "buttonAlertIdentifier"
+let buttonAlertIdentifier = "buttonAlertIdentifier"
 
 enum showAlertType : Int {
     case Tableview
@@ -17,7 +17,7 @@ enum showAlertType : Int {
 
 typealias IndexPathNumBlock = (_ IndexPathNum:Int?)->Void
 
-public class LuBottomAlertView: UIViewController,UITableViewDelegate,UITableViewDataSource{
+class LuBottomAlertView: UIViewController,UITableViewDelegate,UITableViewDataSource{
     
     fileprivate var indexPathNumBlock     : IndexPathNumBlock?
     
@@ -35,7 +35,7 @@ public class LuBottomAlertView: UIViewController,UITableViewDelegate,UITableView
     /// 传入字符串数组参数  参数1: 0.默认列表,1.上灰色下红色列表 ; 参数2以后:正常显示值
     fileprivate var indexText             = [String]()
     
-    override public func viewWillLayoutSubviews() {
+    override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         let bounds = UIScreen.main.bounds
         view.frame = bounds
@@ -45,18 +45,18 @@ public class LuBottomAlertView: UIViewController,UITableViewDelegate,UITableView
     ///   - alertType   : 数组第一参数      例如: 0.默认列表,1.上灰色下红色列表
     ///   - indexTextArr: 传入一个字符串数组 例如: ["0","测试1","测试2"]
     ///   - block       : 回调输出角标数
-    func showBottomTableView(indexTextArr:[String],bottomActionblock:((_ IndexPathNum:Int?)->Void)?){
+    func showBottomTableView(indexTextArr:[String],bottomAction block:((_ IndexPathNum:Int?)->Void)?){
         showBottomBaseView(alertType: .Tableview,indexTextArr:indexTextArr)
-        indexPathNumBlock = bottomActionblock
+        indexPathNumBlock = block
         alertType = 0
     }
     
     /// 带回调的底部时间轴
     ///
     ///   - block       : 回调输出年龄
-    func showBottomDatePickerView(bottomActionblock:((_ IndexPathNum:Int?)->Void)?){
+    func showBottomDatePickerView(bottomAction block:((_ IndexPathNum:Int?)->Void)?){
         showBottomBaseView(alertType: .DatePicker,indexTextArr:nil)
-        indexPathNumBlock = bottomActionblock
+        indexPathNumBlock = block
         alertType = 1
     }
     
@@ -92,7 +92,7 @@ public class LuBottomAlertView: UIViewController,UITableViewDelegate,UITableView
 
 extension LuBottomAlertView{
     
-    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         switch alertType {
         case 0 :
             hideAnimation(bottomAlertTableView)
@@ -171,15 +171,15 @@ extension LuBottomAlertView{
         view.addSubview(bottomAlertTableView)
     }
     
-    public func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return section == 0 ? indexText.count - 1 : 1
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: buttonAlertIdentifier, for: indexPath) as! bottomAlertCell
         
         if indexPath.section == 0{
@@ -216,15 +216,15 @@ extension LuBottomAlertView{
         return cell
     }
     
-    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIScreen.main.bounds.height/1334 * 100
     }
     
-    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return section == 0 ? 0 : UIScreen.main.bounds.height/1334 * 10
     }
     
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPathNumBlock != nil{
             if indexPath.section == 0{

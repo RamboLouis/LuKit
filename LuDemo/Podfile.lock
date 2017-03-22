@@ -1,0 +1,15 @@
+PODS:
+  - LuKit (0.0.1)
+  - SnapKit (3.2.0)
+
+DEPENDENCIES:
+  - LuKit
+  - SnapKit
+
+SPEC CHECKSUMS:
+  LuKit: 5e2a6585cc58d8e013cccb14452513f07924d1a2
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+
+PODFILE CHECKSUM: ae8c48610d15c4959eed51af2f9119dc11bef153
+
+COCOAPODS: 1.2.1.beta.1
