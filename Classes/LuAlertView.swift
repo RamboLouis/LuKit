@@ -10,6 +10,10 @@ import UIKit
 
 public class LuAlertView :NSObject{
     
+    class func showTopFilterView(_ indexTextArr:[String]){
+        LuTopAlertView().showFilterAlertView(textArr: indexTextArr)
+    }
+    
     ///   底部列表弹框
     ///   - alertType   : 数组第一参数      例如: 0.默认列表,1.上灰色下红色列表
     ///   - indexTextArr: 传入一个字符串数组 例如: ["0","测试1","测试2"]

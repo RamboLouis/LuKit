@@ -11,7 +11,7 @@ private let alertCellID = "alertCellID"
 
 class AlertViewController: BaseViewController {
 
-    fileprivate var alertTextArr = ["底部.上红下灰样式列表","底部.相同样式列表","底部.年龄时间轴"]
+    fileprivate var alertTextArr = ["顶部.筛选弹框","底部.上红下灰样式列表","底部.相同样式列表","底部.年龄时间轴"]
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "弹框视图"
@@ -19,6 +19,7 @@ class AlertViewController: BaseViewController {
         baseTableView.register(UITableViewCell.self, forCellReuseIdentifier: alertCellID)
     }
 }
+
 extension AlertViewController{
     override
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,18 +36,22 @@ extension AlertViewController{
         tableView.deselectRow(at: indexPath, animated: false)
         switch indexPath.row {
         case 0:
+            let str = ["测试","测试测试","测试","测试测试"]
+            LuAlertView.showTopFilterView(str)
+            break
+        case 1:
             let str = ["0","测试测试测试1","测试测试测试2","测试测试测试3","测试测试测试4"]
             LuAlertView.showBottomTableView(str, bottomAction: { (num) in
                 debugPrint("所选角标:\(num!)")
             })
             break
-        case 1:
+        case 2:
             let str = ["1","测试标题","测试测试测试"]
             LuAlertView.showBottomTableView(str, bottomAction: { (num) in
                 debugPrint("所选角标:\(num!)")
             })
             break
-        case 2:
+        case 3:
             LuAlertView.showBottomDatePickerView({ (num) in
                 debugPrint("年龄数值：\(num!)")
             })

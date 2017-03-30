@@ -307,6 +307,7 @@ class bottomAlertCell: UITableViewCell {
         contentView.addSubview(lineIcon)
     }
 }
+
 extension UIColor{
     
     class func colorWithString(_ colorString:String) -> UIColor{

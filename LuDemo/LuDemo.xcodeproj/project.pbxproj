@@ -18,6 +18,7 @@
 		522CEDB11E825E1A00B81CBD /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522CEDB01E825E1A00B81CBD /* AlertViewController.swift */; };
 		522CEDB41E82771100B81CBD /* LuBottomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522CEDB31E82771100B81CBD /* LuBottomAlertView.swift */; };
 		522CEDB61E8278BF00B81CBD /* LuAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522CEDB51E8278BF00B81CBD /* LuAlertView.swift */; };
+		52AB7D1F1E83A15F004E9F39 /* LuTopAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB7D1E1E83A15F004E9F39 /* LuTopAlertView.swift */; };
 		97A789C1BC77C38D37658799 /* Pods_LuDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC69237001E10943AD327D3 /* Pods_LuDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		522CEDB01E825E1A00B81CBD /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		522CEDB31E82771100B81CBD /* LuBottomAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuBottomAlertView.swift; sourceTree = "<group>"; };
 		522CEDB51E8278BF00B81CBD /* LuAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuAlertView.swift; sourceTree = "<group>"; };
+		52AB7D1E1E83A15F004E9F39 /* LuTopAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuTopAlertView.swift; sourceTree = "<group>"; };
 		85D62FF574819619DDC21B8D /* Pods-LuDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuDemo/Pods-LuDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C88A6188CE2F2A64D3F2BF78 /* Pods-LuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LuDemo/Pods-LuDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		CDC69237001E10943AD327D3 /* Pods_LuDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,7 @@
 			children = (
 				522CEDB51E8278BF00B81CBD /* LuAlertView.swift */,
 				522CEDB31E82771100B81CBD /* LuBottomAlertView.swift */,
+				52AB7D1E1E83A15F004E9F39 /* LuTopAlertView.swift */,
 			);
 			name = Classes;
 			path = ../../Classes;
@@ -242,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				522CED991E82500600B81CBD /* ViewController.swift in Sources */,
+				52AB7D1F1E83A15F004E9F39 /* LuTopAlertView.swift in Sources */,
 				522CED971E82500600B81CBD /* AppDelegate.swift in Sources */,
 				522CEDB61E8278BF00B81CBD /* LuAlertView.swift in Sources */,
 				522CEDA91E8253AF00B81CBD /* BaseViewController.swift in Sources */,
